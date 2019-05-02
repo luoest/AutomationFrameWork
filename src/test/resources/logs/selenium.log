@@ -1,0 +1,9 @@
+06:26:41,249 DEBUG TestBase:37 - config and OR files loaded
+06:26:44,283 DEBUG TestBase:47 - start browser: chrome
+06:26:47,309 DEBUG TestBase:53 - maximize browser and navagate to: http://localhost
+06:26:47,340 DEBUG TestBase:14 - enter testLogin to test.
+06:26:47,459 DEBUG TestBase:64 - send keys: gotIt, to element: usn_XPATH
+06:26:47,576 DEBUG TestBase:64 - send keys: gotIt123, to element: psw_CSS
+06:26:47,790 DEBUG TestBase:74 - clicking on: sbm_NAME
+06:26:49,979 DEBUG TestBase:26 - inside testLogin test is over.
+06:26:54,136 DEBUG TestBase:101 - All tests are complete.
