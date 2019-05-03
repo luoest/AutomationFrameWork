@@ -1,0 +1,32 @@
+03/05/2019 08:42:52 mayThird config and OR files loaded
+03/05/2019 08:42:55 mayThird start browser: chrome
+03/05/2019 08:42:59 mayThird maximize browser and navagate to: http://localhost
+03/05/2019 08:42:59 mayThird enter testLogin to test.
+03/05/2019 08:42:59 mayThird send keys: gotIt, to element: usn_XPATH
+03/05/2019 08:42:59 mayThird send keys: gotIt123, to element: psw_CSS
+03/05/2019 08:42:59 mayThird clicking on: sbm_NAME
+03/05/2019 08:43:01 mayThird inside testLogin test is over.
+03/05/2019 08:43:01 mayThird enter TestMemberCenter to test.
+03/05/2019 08:43:02 mayThird clicking on: mem_XPATH
+03/05/2019 08:43:02 mayThird clicking on: change_XPATH
+03/05/2019 08:43:02 mayThird inside TestMemberCenter test is over.
+03/05/2019 08:43:02 mayThird enter testChangeInfo to test.
+03/05/2019 08:43:02 mayThird clearing on: name_NAME
+03/05/2019 08:43:02 mayThird send keys: Ð¡Àî, to element: name_NAME
+03/05/2019 08:43:02 mayThird clearing on: qq_NAME
+03/05/2019 08:43:03 mayThird send keys: 5566.0, to element: qq_NAME
+03/05/2019 08:43:03 mayThird clearing on: msn_NAME
+03/05/2019 08:43:03 mayThird send keys: hotmail.com, to element: msn_NAME
+03/05/2019 08:43:03 mayThird inside testChangeInfo test is over.
+03/05/2019 08:43:03 mayThird SKIP ---> TESTCHANGEINFO
+03/05/2019 08:43:03 mayThird SKIP ---> TESTCHANGEINFO
+03/05/2019 08:43:03 mayThird enter testChangeInfo to test.
+03/05/2019 08:43:03 mayThird clearing on: name_NAME
+03/05/2019 08:43:04 mayThird send keys: Marry, to element: name_NAME
+03/05/2019 08:43:04 mayThird clearing on: qq_NAME
+03/05/2019 08:43:04 mayThird send keys: 7698.0, to element: qq_NAME
+03/05/2019 08:43:04 mayThird clearing on: msn_NAME
+03/05/2019 08:43:04 mayThird send keys: facebo, to element: msn_NAME
+03/05/2019 08:43:04 mayThird inside testChangeInfo test is over.
+03/05/2019 08:43:04 mayThird SKIP ---> TESTLOGOUT
+03/05/2019 08:43:09 mayThird All tests are complete.
