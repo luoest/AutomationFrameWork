@@ -1,6 +1,7 @@
 package base;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -36,15 +37,31 @@ public class TestBase {
 	public static String browser;
 	
 	@BeforeSuite
-	public void setUp() throws IOException {
+	public void setUp(){
 		
 		PropertyConfigurator.configure(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\log4j.properties");
 		
 		if (driver == null) {
-			fils = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\config.properties");
-			config.load(fils);
-			fils = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\OR.properties");
-			OR.load(fils);
+			try {
+				fils = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\config.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			try {
+				config.load(fils);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			try {
+				fils = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\OR.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			try {
+				OR.load(fils);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			
 			log.debug("config and OR files loaded");
 			Reporter.log("config and OR files loaded");
