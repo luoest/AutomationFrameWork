@@ -32,7 +32,6 @@ public class TestLogout extends TestBase{
 		log.debug("alertInfo: " + alertInfo);
 		Reporter.log("alertInfo: " + alertInfo);
 		Reporter.log("<br>");
-		System.out.println(alertInfo);
 		
 		Assert.assertEquals(alertInfo, data.get("alertText"));
 		driver.switchTo().alert().accept();

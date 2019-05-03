@@ -38,12 +38,12 @@ public class TestBase {
 	@BeforeSuite
 	public void setUp() throws IOException {
 		
-		PropertyConfigurator.configure("D:\\JAVA_workspace\\JavaDataFrameWork\\src\\test\\resources\\properties\\log4j.properties");
+		PropertyConfigurator.configure(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\log4j.properties");
 		
 		if (driver == null) {
-			fils = new FileInputStream("D:\\JAVA_workspace\\JavaDataFrameWork\\src\\test\\resources\\properties\\config.properties");
+			fils = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\config.properties");
 			config.load(fils);
-			fils = new FileInputStream("D:\\JAVA_workspace\\JavaDataFrameWork\\src\\test\\resources\\properties\\OR.properties");
+			fils = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\OR.properties");
 			OR.load(fils);
 			
 			log.debug("config and OR files loaded");

@@ -21,7 +21,7 @@ public class TestUtil extends TestBase{
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		Date date = new Date();
 		screenshotName = date.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-		FileUtils.copyFile(srcFile, new File("D:\\JAVA_workspace\\JavaDataFrameWork\\target\\surefire-reports\\html\\" + screenshotName));
+		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName));
 	}
 	
 	@DataProvider(name="dp")
@@ -49,10 +49,11 @@ public class TestUtil extends TestBase{
 	public static boolean isTestRunnable(String testName, ExcelReader excel) {
 		String sheetName = "test_suite";
 		int rows = excel.getRowCount(sheetName);
-		for(int rowNum = 2; rowNum<rows; rowNum++) {
+		for(int rowNum = 2; rowNum<=rows; rowNum++) {
 			String testCase = excel.getCellData(sheetName, "TCID", rowNum);
 			if (testCase.equalsIgnoreCase(testName)) {
 				String runmode = excel.getCellData(sheetName, "Runmode", rowNum);
+	
 				if (runmode.equalsIgnoreCase("Y"))
 					return true;
 				return false;
